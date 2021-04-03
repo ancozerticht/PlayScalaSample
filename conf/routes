@@ -1,0 +1,4 @@
+# https://www.playframework.com/documentation/latest/ScalaRouting
+
+# An example rest api controller
+GET     /                           controllers.IndexController.index()
