@@ -14,6 +14,10 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0
 
 routesGenerator := InjectedRoutesGenerator
 
+wartremoverErrors ++= Warts.unsafe
+wartremoverWarnings ++= Warts.all
+wartremoverExcluded ++= routes.in(Compile).value
+
 // Adds additional packages into Twirl
 // TwirlKeys.templateImports += "com.example.controllers._"
 
