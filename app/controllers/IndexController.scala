@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class IndexController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
-  def index() = Action { implicit request =>
+  def index(): Action[AnyContent] = Action { implicit request =>
     Ok("Hello, Play!!!")
   }
 }
