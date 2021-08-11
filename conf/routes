@@ -2,3 +2,5 @@
 
 # An example rest api controller
 GET     /                           controllers.IndexController.index()
+GET     /json                       controllers.JsonController.json(page: Int ?= 1, limit: Int ?= 10)
+POST    /json-post                  controllers.JsonPostController.post()
