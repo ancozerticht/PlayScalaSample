@@ -5,7 +5,7 @@ version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.13.5"
+scalaVersion := "2.13.6"
 
 libraryDependencies += guice
 libraryDependencies += "com.google.inject" % "guice" % "5.0.1"
@@ -16,7 +16,7 @@ routesGenerator := InjectedRoutesGenerator
 
 wartremoverErrors ++= Warts.unsafe
 wartremoverWarnings ++= Warts.all
-wartremoverExcluded ++= routes.in(Compile).value
+wartremoverExcluded ++= (Compile / routes).value
 
 // Adds additional packages into Twirl
 // TwirlKeys.templateImports += "com.example.controllers._"
