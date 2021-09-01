@@ -4,3 +4,5 @@
 GET     /                           controllers.IndexController.index()
 GET     /json                       controllers.JsonController.json(page: Int ?= 1, limit: Int ?= 10)
 POST    /json-post                  controllers.JsonPostController.post()
+GET     /users                      controllers.UserController.getUserAll()
+POST    /users                      controllers.UserController.postUser()
