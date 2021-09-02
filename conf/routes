@@ -6,3 +6,4 @@ GET     /json                       controllers.JsonController.json(page: Int ?=
 POST    /json-post                  controllers.JsonPostController.post()
 GET     /users                      controllers.UserController.getUserAll()
 POST    /users                      controllers.UserController.postUser()
+GET     /user-profile/:id           controllers.MyPageController.getUserProfilePage(id: Int)
