@@ -7,16 +7,15 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala, CodegenPlugin)
 
 scalaVersion := "2.13.6"
 
-libraryDependencies ++= Seq(
-  guice,
-  "com.google.inject" % "guice" % "5.0.1",
-  "com.google.inject.extensions" % "guice-assistedinject" % "5.0.1",
-  "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test,
-  "com.typesafe.play" %% "play-slick" % "5.0.0",
-  "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3",
-  "com.typesafe.slick" %% "slick-codegen" % "3.3.3",
-  "org.postgresql" % "postgresql" % "42.2.23"
-)
+libraryDependencies += guice
+libraryDependencies += "com.google.inject" % "guice" % "5.0.1"
+libraryDependencies += "com.google.inject.extensions" % "guice-assistedinject" % "5.0.1"
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
+libraryDependencies += "com.typesafe.play" %% "play-slick" % "5.0.0"
+libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3"
+libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.3.3"
+libraryDependencies += "org.postgresql" % "postgresql" % "42.2.23"
+libraryDependencies += "org.typelevel" %% "cats-core" % "2.6.1"
 
 routesGenerator := InjectedRoutesGenerator
 
