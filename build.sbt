@@ -11,11 +11,14 @@ libraryDependencies += guice
 libraryDependencies += "com.google.inject" % "guice" % "5.0.1"
 libraryDependencies += "com.google.inject.extensions" % "guice-assistedinject" % "5.0.1"
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
+libraryDependencies += "org.typelevel" %% "discipline-scalatest" % "2.1.5"
 libraryDependencies += "com.typesafe.play" %% "play-slick" % "5.0.0"
+libraryDependencies += "com.typesafe.slick" %% "slick" % "3.3.3"
 libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3"
 libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.3.3"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.2.23"
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.6.1"
+libraryDependencies += "org.typelevel" %% "cats-laws" % "2.6.1"
 
 routesGenerator := InjectedRoutesGenerator
 

@@ -3,7 +3,11 @@
 # An example rest api controller
 GET     /                           controllers.IndexController.index()
 GET     /json                       controllers.JsonController.json(page: Int ?= 1, limit: Int ?= 10)
++nocsrf
 POST    /json-post                  controllers.JsonPostController.post()
-GET     /users                      controllers.UserController.getUserAll()
-POST    /users                      controllers.UserController.postUser()
+GET     /user/all                   controllers.UserController.getUserAll()
+GET     /user/:id                   controllers.UserController.getUser(id: Int)
++nocsrf
+POST    /user                       controllers.UserController.addUser()
 GET     /user-profile/:id           controllers.MyPageController.getUserProfilePage(id: Int)
+GET     /cats-test                  controllers.CatsTestController.testCats()
